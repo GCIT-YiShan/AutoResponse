@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cokelime.bryan.autoresponse" >
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.cokelime.bryan.autoresponse.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.cokelime.bryan.autoresponse.AddCustomRuleActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <service
+            android:name="com.cokelime.bryan.autoresponse.PhoneCallBlockService"
+            android:enabled="true"
+            android:exported="false" >
+        </service>
+
+        <activity android:name="com.cokelime.bryan.autoresponse.AndroidDatabaseManager"
+            android:theme="@style/Theme.AppCompat.Light"/>
+
+
+    </application>
+
+</manifest>

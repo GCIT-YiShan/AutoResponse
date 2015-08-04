@@ -1,0 +1,19 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cokelime.bryan.autoresponse.HistoryFragment">
+
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="553dp"
+        android:id="@+id/historyList"
+        android:layout_gravity="center" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:id="@+id/historyClearBtn"
+        android:layout_gravity="right|bottom" />
+</FrameLayout>
